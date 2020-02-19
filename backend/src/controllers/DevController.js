@@ -51,7 +51,7 @@ module.exports = {
 
   async update(req, res) {     
 
-    const { bio, name, latitude, longitude, techs } = req.body;
+    const { github_username, latitude, longitude, techs } = req.body;
     const { id } = req.params;
 
     const techsArray = parseStringAsArray(techs);  
@@ -63,8 +63,7 @@ module.exports = {
     await Dev.findOneAndUpdate(
       id,
       {
-        name, 
-        bio,
+        github_username,
         techs: techsArray,
         location
       },      
@@ -79,14 +78,15 @@ module.exports = {
   async delete(req, res) {
     const { id } = req.params;
     
-    try {
-      const dev = await Dev.findById({ _id: id });
-
+    try {      
+      const dev = await Dev.findById(id);      
+      
       if (!dev) {
-        return res.status(404).json({ error: 'Enrollment not found.' });
+        return res.status(404).json({ error: 'Dev not found.' });
       }
-      console.log('ok');
-      await Dev.destroy({ where: { _id: id } });
+
+      await Dev.deleteOne({ _id: id });    
+
       return res.status(200).json({ sucess: 'Deleted with sucess.' });
     } catch (err) {
       return res.status(400).json({ erro: 'Delete failed.' });

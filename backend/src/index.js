@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-3bwqp.mongodb.net/w
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
-  useFindAndModify: false
+  useFindAndModify: true,
 });
 
 // para  rota entender a estrutura do json.

@@ -2,13 +2,15 @@ li.dev-item {
   background: #fff;
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
   border-radius: 2px;
-  padding: 20px;
+  padding: 20px;  
+  width: 100%;
 }
 
-li.dev-item header {
+li.dev-item header {  
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center;  
+  justify-content: space-between;      
 }
 
 li.dev-item header img {
@@ -18,6 +20,23 @@ li.dev-item header img {
 }
 
 li.dev-item header .user-info {
+  margin-left: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+}
+
+li.dev-item header .info-name  {
+  flex: 1;
+  flex-direction: column;  
+}
+
+li.dev-item header .user-info strong {
+  margin-right: 12px;
+  margin-left: 10px;
+}
+
+li.dev-item header .user-info span {
   margin-left: 10px;
 }
 
