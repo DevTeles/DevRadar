@@ -3,11 +3,11 @@
 <h1 align="center">
   DevRadar
   <br /> <br />
-  <img src="assets/devRadar.png" />
+  <img src="./mobile/assets/devRadar.png" />
   <br /> <br />
-  <img src="assets/devRadar2.png" />
+  <img src="./mobile/assets/devRadar2.png" />
     <br /> <br />
-  <img src="assets/devRadar3.png" />
+  <img src="./mobile/assets/devRadar3.png" />
 </h1>
 
 # Indice
